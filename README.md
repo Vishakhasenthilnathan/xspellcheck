@@ -27,4 +27,4 @@ It must be case-insensitive. For example, it must give correction suggestion the
 If you remove all the characters from the textbox, you must see no suggestions just like the initial render:
 
 
-vercel - xspellcheck-six-xi.vercel.app
+vercel - [xspellcheck-six-xi.vercel.app](https://xspellcheck-six-xi.vercel.app/)
