@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+The XSpellCheck is a React-based application designed for real-time spell-checking and auto-correction. It uses a custom dictionary to identify and suggest corrections for common typos and misspellings in user-entered text. The app focuses on improving user-written content by flagging the first detected misspelling and offering a correction.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+We already have the class-component based implementation, you must convert it into functional-component based implementation without changing its UI look and working.
 
-## Available Scripts
+Here’s the dictionary that you must use. The spell-checks will be done on the basis of this.
 
-In the project directory, you can run:
+const customDictionary = {
 
-### `npm start`
+teh: "the",
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+wrok: "work",
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+fot: "for",
 
-### `npm test`
+exampl: "example"
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+};
 
-### `npm run build`
+Upon initial render:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If we type wrong spelling for any of ther words mentioned in our dictionary, we must get a correction message. For example, when we type "wrok" in the textbox, we get the following correction suggestion:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+It must work even when we enter a sentence. If there are multiple wrong spellings, it must show the correction suggestion for the first one. For example, when we type "For exampl this wrok", we get the following correction suggestion for just the first wrong spelling i.e. example for exampl:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+It must be case-insensitive. For example, it must give correction suggestion the for the as well as The:
 
-### `npm run eject`
+If you remove all the characters from the textbox, you must see no suggestions just like the initial render:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+vercel - xspellcheck-six-xi.vercel.app
